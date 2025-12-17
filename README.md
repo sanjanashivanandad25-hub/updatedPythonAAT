@@ -1,4 +1,4 @@
-# updatedPythonAAT[pythonAAT.py](https://github.com/user-attachments/files/24219639/pythonAAT.py)
+
 print("---------------------------------------------------------SGPA CALCULATOR-------------------------------------------------------")
 sub = {
     "Maths": 4,
