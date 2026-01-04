@@ -28,6 +28,22 @@ def grade_point(total_marks):
         return 5
     else:
         return 0
+def grade_and_level(gp):
+    if gp == 10:
+        return "O", "Outstanding"
+    elif gp == 9:
+        return "A+", "Excellent"
+    elif gp == 8:
+        return "A", "Very Good"
+    elif gp == 7:
+        return "B+", "Good"
+    elif gp == 6:
+        return "B", "Above Average"
+    elif gp == 5:
+        return "C", "Average"
+    else:
+        return "F", "Fail"
+
 
 total_credit_points = 0
 total_credits = 0
@@ -47,6 +63,8 @@ for subject, credit in sub.items():
     total_marks = cie_total + aat +reduced_see
 
     gp = grade_point(total_marks)
+    grade, level = grade_and_level(gp)
+
 
     total_credit_points += gp * credit
     total_credits += credit
@@ -97,5 +115,8 @@ total_credits+=2
 sgpa = total_credit_points / 20
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SGPA RESULT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print(f"SGPA = {sgpa:.2f}")
+print(f"Grade: {grade}")
+print(f"Level: {level}")
+
 
 
